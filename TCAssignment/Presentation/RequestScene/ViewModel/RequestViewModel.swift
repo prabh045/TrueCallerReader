@@ -11,11 +11,11 @@ class RequestViewModel {
     var tenthCharacter = Box("")
     var everyTenthCharacter = Box("")
     var wordCount = Box(-1)
-    var requestRepo: RequestRepository
+    var requestRepo: TenthCharRequestable
     var everyTenthCharRepo: EveryTenthRequestable
     var wordCountRepo: WordCountable
     
-    init(requestRepo: RequestRepository, everyTenthCharRepo: EveryTenthRequestable,  wordCountRepo: WordCountable) {
+    init(requestRepo: TenthCharRequestable, everyTenthCharRepo: EveryTenthRequestable,  wordCountRepo: WordCountable) {
         self.requestRepo = requestRepo
         self.everyTenthCharRepo = everyTenthCharRepo
         self.wordCountRepo = wordCountRepo

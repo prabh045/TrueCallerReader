@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TenthCharRequestRepository: RequestRepository {
+class TenthCharRequestRepository: TenthCharRequestable {
     func fetchTenthCharacter(completion: @escaping (Result<String,RequestApiError>) -> Void) {
         let urlString = AppConfiguration.apiBaseUrl
         guard let url = URL(string: urlString) else {

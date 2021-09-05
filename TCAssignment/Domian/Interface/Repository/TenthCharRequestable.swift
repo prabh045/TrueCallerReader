@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol RequestRepository {
+protocol TenthCharRequestable {
     func fetchTenthCharacter(completion: @escaping (Result<String,RequestApiError>) -> Void)
 }
 
