@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    //MARK: UISETUP
+    //MARK: Setup
     func setupUI() {
         view.backgroundColor = UIColor.black
         view.addSubview(requestView)
@@ -42,30 +42,31 @@ class MainViewController: UIViewController {
     func setupViewModel() {
         requestViewModel.tenthCharacter.bind { [weak self] (character) in
             DispatchQueue.main.async {
-                self?.requestView.requestTextView.text = "\(self?.requestView.requestTextView.text ?? "")\n\n\(character)"
+                self?.requestView.requestTextView.text = "\(self?.requestView.requestTextView.text ?? "")\n\n Tenth Character is -> \(character)"
             }
         }
         requestViewModel.everyTenthCharacter.bind { [weak self] (result) in
             DispatchQueue.main.async {
-                self?.requestView.requestTextView.text = "\(self?.requestView.requestTextView.text ?? "")\n\n\(result)"
+                self?.requestView.requestTextView.text = "\(self?.requestView.requestTextView.text ?? "")\n\nEvery Tenth Character starts here\n \(result)"
             }
         }
         requestViewModel.wordCount.bind { [weak self] (wordcount) in
             DispatchQueue.main.async {
-                self?.requestView.requestTextView.text = "\(self?.requestView.requestTextView.text ?? "")\n\n\(wordcount)"
+                self?.requestView.requestTextView.text = "\(self?.requestView.requestTextView.text ?? "")\n\nWord Count is -> \(wordcount)"
             }
         }
     }
     
     //MARK: Fetch Requests
-    func fetchTenthCharacter() {
+    func fetchRequests() {
         requestViewModel.fetchTenthCharacter()
         requestViewModel.fetchEveryTenthCharacter()
         requestViewModel.fetchWordCount()
     }
     //MARK: Actions
     @objc func requestButtonTapped() {
-        fetchTenthCharacter()
+        self.requestView.requestTextView.text = ""
+        fetchRequests()
     }
 }
 

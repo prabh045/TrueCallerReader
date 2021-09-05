@@ -23,6 +23,5 @@ class Box<T> {
     
     func bind(listener: Listener?) {
         self.listener = listener
-        //listener?(value)
     }
 }

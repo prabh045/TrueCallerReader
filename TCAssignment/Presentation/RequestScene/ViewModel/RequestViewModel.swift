@@ -8,6 +8,7 @@
 import Foundation
 
 class RequestViewModel {
+    //MARK: Properties
     var tenthCharacter = Box("")
     var everyTenthCharacter = Box("")
     var wordCount = Box(-1)
@@ -15,12 +16,14 @@ class RequestViewModel {
     var everyTenthCharRepo: EveryTenthRequestable
     var wordCountRepo: WordCountable
     
+    //Mark: Initialiser
     init(requestRepo: TenthCharRequestable, everyTenthCharRepo: EveryTenthRequestable,  wordCountRepo: WordCountable) {
         self.requestRepo = requestRepo
         self.everyTenthCharRepo = everyTenthCharRepo
         self.wordCountRepo = wordCountRepo
     }
     
+    //MARK: Fetch Requests
     func fetchTenthCharacter() {
         requestRepo.fetchTenthCharacter { (result) in
             switch result {
@@ -52,5 +55,12 @@ class RequestViewModel {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    //MARK: Utility Functions
+    func clearText() {
+        tenthCharacter.value = ""
+        everyTenthCharacter.value = ""
+        wordCount.value = -1
     }
 }
