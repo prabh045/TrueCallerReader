@@ -19,7 +19,6 @@
 		7FB5AE2D26DFE7CE002397F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5AE2C26DFE7CE002397F2 /* AppDelegate.swift */; };
 		7FB5AE2F26DFE7CE002397F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5AE2E26DFE7CE002397F2 /* SceneDelegate.swift */; };
 		7FB5AE3126DFE7CE002397F2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5AE3026DFE7CE002397F2 /* MainViewController.swift */; };
-		7FB5AE3426DFE7CE002397F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB5AE3226DFE7CE002397F2 /* Main.storyboard */; };
 		7FB5AE3626DFE7D0002397F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB5AE3526DFE7D0002397F2 /* Assets.xcassets */; };
 		7FB5AE3926DFE7D0002397F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB5AE3726DFE7D0002397F2 /* LaunchScreen.storyboard */; };
 		7FB5AE4426DFE7D1002397F2 /* RequestViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5AE4326DFE7D1002397F2 /* RequestViewModelTests.swift */; };
@@ -58,7 +57,6 @@
 		7FB5AE2C26DFE7CE002397F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FB5AE2E26DFE7CE002397F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7FB5AE3026DFE7CE002397F2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		7FB5AE3326DFE7CE002397F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7FB5AE3526DFE7D0002397F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FB5AE3826DFE7D0002397F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FB5AE3A26DFE7D0002397F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F23FE8126E4B0D4007BCE8C /* RequestViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7FB5AE4326DFE7D1002397F2 /* RequestViewModelTests.swift */,
+				7F23FE8826E4B0DF007BCE8C /* Mocks */,
+			);
+			path = RequestViewModel;
+			sourceTree = "<group>";
+		};
+		7F23FE8826E4B0DF007BCE8C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7F3AA9EA26E4A57400AF45AA /* MockRequests.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		7F83AEB726E3975200B9B152 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,7 +251,6 @@
 				7F83AEDD26E3991400B9B152 /* Data */,
 				7F83AED526E398ED00B9B152 /* Domian */,
 				7F83AEC026E397D100B9B152 /* Presentation */,
-				7FB5AE3226DFE7CE002397F2 /* Main.storyboard */,
 				7F83AEC426E3980000B9B152 /* Resources */,
 				7F83AEE126E3999800B9B152 /* Common */,
 			);
@@ -246,9 +260,8 @@
 		7FB5AE4226DFE7D1002397F2 /* TCAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				7FB5AE4326DFE7D1002397F2 /* RequestViewModelTests.swift */,
+				7F23FE8126E4B0D4007BCE8C /* RequestViewModel */,
 				7FB5AE4526DFE7D1002397F2 /* Info.plist */,
-				7F3AA9EA26E4A57400AF45AA /* MockRequests.swift */,
 			);
 			path = TCAssignmentTests;
 			sourceTree = "<group>";
@@ -367,7 +380,6 @@
 			files = (
 				7FB5AE3926DFE7D0002397F2 /* LaunchScreen.storyboard in Resources */,
 				7FB5AE3626DFE7D0002397F2 /* Assets.xcassets in Resources */,
-				7FB5AE3426DFE7CE002397F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,14 +452,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7FB5AE3226DFE7CE002397F2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7FB5AE3326DFE7CE002397F2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7FB5AE3726DFE7D0002397F2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
